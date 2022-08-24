@@ -2,11 +2,13 @@ let hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:0
 
 let tBody = document.getElementById('cookieData');
 
-let tRow = document.getElementById('cookieData');
-
-// let tData = document.getElementById('cookieData');
-
 let grandTotalCookies = 0;
+
+let hourlyTotals = [];
+
+let tRow;
+let tData;
+let tHead;
 
 function Store(location, min, max, avgCookie){
   this.location = location;
@@ -40,12 +42,17 @@ for (let key in locations){
   locations[key].calcCookies();
 }
 
-// function dailyCookies(){
-//   for (let key in locations){
-
-//   }
-// }
-// dailyCookies();
+function calcHourlyTotals(){
+  for(let j = 0; j < hours.length; j++){
+    let hourlyTotal = 0;
+    for(let key in locations){
+      hourlyTotal += (locations[key].numberOfCookiesPerHour[j]);
+      hourlyTotals[j] = hourlyTotal;
+    }
+  }
+  console.log(hourlyTotals);
+}
+calcHourlyTotals();
 
 function renderBody(){
   let tData;
@@ -61,7 +68,6 @@ function renderBody(){
     for(let i in locations[key].numberOfCookiesPerHour){
       tData = document.createElement('td');
       tData.textContent = locations[key].numberOfCookiesPerHour[i];
-      console.log(locations[key].numberOfCookiesPerHour[i]);
       tBody.appendChild(tData);
     }
 
@@ -77,7 +83,7 @@ function renderHeader(){
   tRow = document.createElement('tr');
   tBody.appendChild(tRow);
 
-  let tHead = document.createElement('th');
+  tHead = document.createElement('th');
   tBody.appendChild(tHead);
 
   for (let i = 0; i < hours.length; i++){
@@ -96,12 +102,20 @@ function renderFooter(){
   tRow = document.createElement('tr');
   tBody.appendChild(tRow);
 
-  let tHead = document.createElement('th');
+  tHead = document.createElement('th');
   tHead.textContent = 'Hourly Totals';
   tBody.appendChild(tHead);
 
-}
+  for(let i in hourlyTotals){
+    tData = document.createElement('td');
+    tData.textContent = hourlyTotals[i];
+    tBody.appendChild(tData);
+  }
 
+  tHead = document.createElement('th');
+  tHead.textContent = grandTotalCookies;
+  tBody.appendChild(tHead);
+}
 
 renderHeader();
 renderBody();
