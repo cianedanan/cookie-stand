@@ -6,36 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookies Data</title>
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script>\
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="home.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    
 </head>
-
-<header>
-  <nav>
-      <h1 id="storename">Pat's Salmon Cookies</h1>
-    <ul>
-      <li></li>
-      <li></li>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="">LOCATIONS</a></li>
-      <li><a href="sales.html">SALES</a></li>
-      <li>
-    </ul>
-  </nav>
+<nav>
+  <h1 id="storename">Pat's Salmon Cookies</h1>
+<ul>
+  <li></li>
+  <li></li>
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="">LOCATIONS</a></li>
+  <li><a href="sales.html">SALES</a></li>
+  <li>
+</ul>
+</nav>
+<header> 
 </header>
-
 
 <body>
   <main>
     <form id ="store-form">
       <fieldset>
-      
+       <legend>Add a New Store</legend>
+       <section>
+        <label>Store Location:</label>
+        <input name="store_location" type="text">
+       </section>
+       <section>
+        <label>Max Customers:</label>
+        <input name="cust_max" type="number">
+       </section>
+       <section>
+        <label>Min Customers:</label>
+        <input name="cust_min" type="number">
+       </section>
+       <section>
+        <label>Average Cookies:</label>
+        <input name="avg_cookie" type="number">
+       </section>
+       <button type="submit">Add Store</button>
       </fieldset>
     </form>
   <table id="cookieData">
   </table>
+  <script src=""></script>
 </main>
 </body>
 </html>
