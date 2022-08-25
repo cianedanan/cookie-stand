@@ -1,0 +1,50 @@
+@font-face {
+    font-family: lato;
+    src: url(fonts/Lato-Regular.ttf);
+}
+
+
+
+table{
+    font-family: 'Quicksand', sans-serif;;
+    border-collapse: collapse;
+    border-radius: 5px;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-height: 400px;
+    border-bottom:2px solid gainsboro;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+th{
+  
+    text-align: left;
+    font-weight: bold;
+    color: #f0f0f0;
+    background-color: #005086;
+    padding: 15px;
+}
+
+td{
+    border-bottom:2px solid gainsboro;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+tr{
+    border-bottom:  1px solid #dddddd;
+}
+
+tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+tr:nth-of-type(odd){
+    color: #005086;
+    font-weight: bold;
+}
+
+tr:last-of-type{
+    border-bottom: 2px solid;
+}

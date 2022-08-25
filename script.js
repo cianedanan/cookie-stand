@@ -1,6 +1,6 @@
-let hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00am', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', ];
+let hours = ['6 AM', '7 AM', '8 AM', '9AM', '10 AM', '11 AM', '12 AM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', ];
 
-let tBody = document.getElementById('cookieData');
+let dataTable = document.getElementById('cookieData');
 
 let grandTotalCookies = 0;
 
@@ -55,66 +55,67 @@ function calcHourlyTotals(){
 calcHourlyTotals();
 
 function renderBody(){
-  let tData;
 
   for(let key in locations){
     tRow = document.createElement('tr');
-    tBody.appendChild(tRow);
+    dataTable.appendChild(tRow);
 
     let tHead = document.createElement('th');
     tHead.textContent = locations[key].location;
-    tBody.appendChild(tHead);
+    tRow.appendChild(tHead);
 
     for(let i in locations[key].numberOfCookiesPerHour){
       tData = document.createElement('td');
       tData.textContent = locations[key].numberOfCookiesPerHour[i];
-      tBody.appendChild(tData);
+      tRow.appendChild(tData);
     }
 
     tData = document.createElement('td');
     tData.textContent = locations[key].totalCookies;
     grandTotalCookies += locations[key].totalCookies;
-    tBody.appendChild(tData);
+    tRow.appendChild(tData);
 
   }
 }
 
 function renderHeader(){
+
+
   tRow = document.createElement('tr');
-  tBody.appendChild(tRow);
+  dataTable.appendChild(tRow);
 
   tHead = document.createElement('th');
-  tBody.appendChild(tHead);
+  tRow.appendChild(tHead);
 
   for (let i = 0; i < hours.length; i++){
     tHead = document.createElement('th');
     tHead.textContent = hours[i];
-    tBody.appendChild(tHead);
+    tRow.appendChild(tHead);
   }
 
   tHead = document.createElement('th');
   tHead.textContent = 'Daily Totals';
-  tBody.appendChild(tHead);
+  tRow.appendChild(tHead);
 }
 
 function renderFooter(){
 
   tRow = document.createElement('tr');
-  tBody.appendChild(tRow);
+  dataTable.appendChild(tRow);
 
   tHead = document.createElement('th');
   tHead.textContent = 'Hourly Totals';
-  tBody.appendChild(tHead);
+  tRow.appendChild(tHead);
 
   for(let i in hourlyTotals){
     tData = document.createElement('td');
     tData.textContent = hourlyTotals[i];
-    tBody.appendChild(tData);
+    tRow.appendChild(tData);
   }
 
   tHead = document.createElement('th');
   tHead.textContent = grandTotalCookies;
-  tBody.appendChild(tHead);
+  tRow.appendChild(tHead);
 }
 
 renderHeader();
