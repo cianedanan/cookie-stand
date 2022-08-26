@@ -153,8 +153,6 @@ formEl.addEventListener ('submit',
   }
 );
 
-
-
 renderHeader();
 renderBody();
 renderFooter();
