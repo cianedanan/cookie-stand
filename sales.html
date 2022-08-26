@@ -10,28 +10,65 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="home.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    
 </head>
-
-<header>
-  <nav>
-      <h1 id="storename">Pat's Salmon Cookies</h1>
-    <ul>
-      <li></li>
-      <li></li>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="">LOCATIONS</a></li>
-      <li><a href="sales.html">SALES</a></li>
-      <li>
-    </ul>
-  </nav>
+<nav>
+  <h1 id="storename">Pat's Salmon Cookies</h1>
+<ul>
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="">LOCATIONS</a></li>
+  <li><a href="merch.html">MERCH</a></li>
+  <li><a href="sales.html">SALES</a></li>
+  <li>
+</ul>
+</nav>
+<header> 
 </header>
-
-
 <body>
   <main>
+    <form id ="store-form">
+      <fieldset>
+       <legend>Add a New Store</legend>
+       <section>
+        <label>Store Location:</label>
+        <input name="store_location" type="text">
+       </section>
+       <section>
+        <label>Max Customers:</label>
+        <input name="cust_max" type="number">
+       </section>
+       <section>
+        <label>Min Customers:</label>
+        <input name="cust_min" type="number">
+       </section>
+       <section>
+        <label>Average Cookies:</label>
+        <input name="avg_cookie" type="number">
+       </section>
+       <section>
+       <button type="submit">Add Store</button>
+       </section>
+      </fieldset>
+    </form>
   <table id="cookieData">
   </table>
+  <script src=""></script>
 </main>
+<footer>
+  <div id="feeter">
+    <div>
+      <h2 id="footHead">Pat's Salmon Cookies<h2>
+      <p id="copyright">Copyright &copy; 2022 Cianenry Danan</p>
+    </div>
+    <div id="feetlink">
+      <a href="http://bettercallsaul.amc.com/" target="_blank">LEGAL THANGS</a>
+        |
+      <a href="">PRIVACY POLICY</a>
+       |
+      <a href="https://www.sonypictures.com/movies/paulblartmallcop">SECURITY</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
 
