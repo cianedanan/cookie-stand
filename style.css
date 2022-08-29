@@ -250,10 +250,6 @@ flex-direction: column;
 align-items: flex-start;
 }
 
-#merch{
-
-}
-
 #pmerch{
     width: 75%;
     margin-left:16px;
@@ -271,11 +267,28 @@ align-items: flex-start;
     font-family: 'Oleo Script', cursive;
     margin-top: 0;
     font-size: 100px;
-    margin-bottom:0px;
+    margin-bottom:15px;
 }
 
 #shirt{
     text-align: center;
+}
+
+#cutterdiv{
+    display: flex;
+    justify-content: center;
+}
+
+#cutterp{
+    font-family: Quicksand;
+    width: 550px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+#cutterimg{
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 /* home page */
@@ -326,11 +339,19 @@ article > p{
     text-align: center;
 }
 
+#mainp{
+    font-size: 30px;
+}
+
+#fineprint{
+    font-size: 8px;
+}
+
 #locations {
     text-align: center;
     font-size: 100px;
     font-family: 'Oleo Script', cursive;
-    margin-top:100px
+    margin-top:50px
 }
 
 #locations-container{
@@ -338,20 +359,49 @@ article > p{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 15px;
+    padding: 15px;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: #dddddd;
+    font-family: Quicksand;
 }
 
 .locationsp{
     width: 225px;
+    color: white;
+   
 }
 
 .locationsdiv{
-    margin:15px;
+    margin:8px;
 }
 
+h4 {
+    color: #005086;
+    font-size: 25px;
+}
 
 #menu{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 50px;
+}
+
+#menudiv{
+    display: flex;
+}
+
+.cookiediv{
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    font-family: Quicksand;
+}
+
+#salmoncookie{
+    font-size: 20px;
+    
 }
