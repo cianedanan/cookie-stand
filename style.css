@@ -255,12 +255,26 @@ align-items: flex-start;
     margin-left:16px;
 }
 
+#merch-home{
+    display: flex;
+    margin:50px;
+    
+}
 #merch-container{
     margin-top: 100px;
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
     width: 1980px;
+}
+
+#merch-main{
+    width: 1980px;
+}
+
+#mercha{
+    width:500px;
+    margin: 10px;
 }
 
 .topheader{
